@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sistema PetLife para clínicas veterinárias e pet shops">
+<meta name="author" content="Lara Carolina Dias">
+<title>PetLife Gestão</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    margin:0;
+    background:#f7f8ff;
+    color:#333;
+}
+
+header{
+    background:#fff9c4;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    height:60px;
+    margin-right:10px;
+}
+
+.logo h1{
+    font-size:34px;
+    color:#69a9ff;
+    margin:0;
+}
+
+nav a{
+    margin:0 12px;
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#69a9ff;
+}
+
+section{
+    background:#fff;
+    margin:30px auto;
+    width:90%;
+    max-width:1300px;
+    border-radius:16px;
+    padding:35px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+h2{
+    color:#69a9ff;
+    margin-bottom:20px;
+    font-size:38px;
+}
+
+.preview{
+    width:100%;
+    border-radius:14px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.12);
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:20px;
+}
+
+.card{
+    background:#fdf7d3;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+}
+
+.card h3{
+    margin-top:0;
+    color:#222;
+}
+
+.preco{
+    font-size:28px;
+    color:#69a9ff;
+    font-weight:700;
+    margin:15px 0;
+}
+
+.btn{
+    background:#ff7aa8;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-family:'Poppins',sans-serif;
+}
+
+textarea{
+    resize:none;
+    height:120px;
+}
+
+iframe{
+    width:100%;
+    height:500px;
+    border:none;
+    border-radius:14px;
+}
+
+footer{
+    background:#17356d;
+    color:white;
+    text-align:center;
+    padding:18px;
+    margin-top:30px;
+}
+
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        text-align:center;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:8px;
+    }
+
+    .logo h1{
+        font-size:28px;
+    }
+
+    h2{
+        font-size:30px;
+    }
+
+    iframe{
+        height:280px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="petlifelogo.png" alt="PetLife">
+        <h1>PetLife Gestão</h1>
+    </div>
+
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#planos">Planos</a>
+        <a href="#demo">Demonstração</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<section id="sobre">
+    <h2>Sobre</h2>
+    <p>Controle completo de clientes, pets e finanças com o PetLife.</p>
+
+    <img class="preview" src="petlife.png" alt="Sistema PetLife">
+</section>
+
+<section id="planos">
+    <h2>Planos</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Básico</h3>
+            <div class="preco">R$49</div>
+            <p>Ideal para pequenos pet shops.</p>
+            <button class="btn">Assinar</button>
+        </div>
+
+        <div class="card">
+            <h3>Profissional</h3>
+            <div class="preco">R$89</div>
+            <p>Mais controle e relatórios.</p>
+            <button class="btn">Assinar</button>
+        </div>
+
+        <div class="card">
+            <h3>Premium</h3>
+            <div class="preco">R$129</div>
+            <p>Recursos completos para clínicas.</p>
+            <button class="btn">Assinar</button>
+        </div>
+
+    </div>
+</section>
+
+<section id="demo">
+    <h2>Demonstração</h2>
+
+    <iframe 
+        src="https://www.youtube.com/embed/USl3lCCqMro"
+        title="Demonstração PetLife"
+        allowfullscreen>
+    </iframe>
+</section>
+
+<section id="contato">
+    <h2>Contato</h2>
+
+    <input type="text" placeholder="Nome">
+    <input type="email" placeholder="E-mail">
+    <input type="text" placeholder="Telefone">
+    <textarea placeholder="Mensagem"></textarea>
+
+    <button class="btn">Enviar mensagem</button>
+</section>
+
+<footer>
+© 2026 PetLife Gestão. Todos os direitos reservados.
+</footer>
+
+</body>
+</html>
